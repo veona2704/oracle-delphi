@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het Orakel van Delphi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="oracleScreen" class="oracle-screen" style="display: none;">
+    <div class="oracle-box">
+        <p class="oracle-subtitle">DE PYTHIA SPREEKT</p>
+        <h1>Het Orakel van Delphi</h1>
+        <p id="oracleProgress">Vraag 1 van 3</p>
+        <h2 id="oracleQuestion">Wat zoek je tijdens deze reis?</h2>
+
+        <div id="oracleAnswers" class="oracle-answers"></div>
+
+        <div id="oracleResult" style="display: none;">
+            <h2>Jouw voorspelling</h2>
+            <p id="oraclePrediction"></p>
+            <button onclick="location.reload()">Opnieuw spelen</button>
+        </div>
+    </div>
+</div>
+
+<body>
+    <main>
+        <h1>Het Orakel van Delphi</h1>
+        <p>Verken Delphi en ontdek wat het orakel voor jou verborgen houdt.</p>
+
+        <div class="game-container">
+            <canvas id="game" width="640" height="400"></canvas>
+        </div>
+
+        <section class="dialogue">
+            <h2 id="location">De reis begint</h2>
+            <p id="story">Je bent aangekomen in Delphi. Gebruik de pijltjestoetsen om rond te lopen. Druk op E bij een interessante plek om deze te onderzoeken.</p>
+            <p id="hint">Tip: loop naar de plekken op de kaart!</p>
+        </section>
+
+        <p class="controls">Bewegen: pijltjestoetsen of WASD · Onderzoeken: E</p>
+    </main>
+
+    <script src="game.js"></script>
+</body>
+</html>
